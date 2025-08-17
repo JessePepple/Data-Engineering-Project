@@ -25,7 +25,7 @@ FROM source_cars_data; Whilst the last_laod was SELECT * FROM water_table;
 
 ## Phase2(Transformation)
 
-The project also utilized Unity Catalog to provide secure and centralized data governance, followed by the setup of the Databricks environment for the core transformation tasks. As demonstrated in the Silver Notebook, the transformations required at this stage were relatively minimal. The most notable adjustment was splitting the Model_Id field into a new Model Category, which laid the groundwork for handling Slowly Changing Dimensions (SCDs) and preparing the data for further refinement.
+The project also utilized Unity Catalog to provide secure and centralized data governance, followed by the setup of the Databricks environment for the core transformation tasks. As demonstrated in the Silver Notebook, the transformations required at this stage were relatively minimal. The most notable adjustment was splitting the Model_Id field into a new Model Category, which laid the groundwork for handling Slowly Changing Dimensions (SCDs Type 1) and preparing the data for further refinement.
 
 <img width="1434" height="737" alt="Screenshot 2025-09-01 at 07 56 14" src="https://github.com/user-attachments/assets/b4347fef-eec4-41f0-9fd6-a970d0ecb757" />
 <img width="1434" height="737" alt="Screenshot 2025-09-02 at 01 52 38" src="https://github.com/user-attachments/assets/17a40028-3988-47f5-bbb3-99876f5a7dc3" />
@@ -43,7 +43,7 @@ In Phase 3, the primary focus was on implementing the Slowly Changing Dimensions
 
 The Initial Load was successful
 <img width="1434" height="737" alt="Screenshot 2025-09-03 at 07 07 33" src="https://github.com/user-attachments/assets/acf50df7-6930-473b-9507-bc4894d058cf" />
-To further validate the pipeline, I introduced new changes to the source data and re-ran the process. The updates were handled successfully, confirming that the Slowly Changing Dimensions (SCD) logic worked as intended. This final step demonstrated the robustness of the design and fully concluded the project with a reliable and scalable data pipeline.
+To further validate the pipeline, I introduced new changes to the source data and re-ran the process. The updates were handled successfully, confirming that the Slowly Changing Dimensions (SCD Type 1) logic worked as intended. This final step demonstrated the robustness of the design and fully concluded the project with a reliable and scalable data pipeline.
 
 <img width="1434" height="737" alt="Screenshot 2025-09-03 at 11 02 13" src="https://github.com/user-attachments/assets/7d1b2c6c-dd9d-479b-ab11-c3ba484896ee" />
 
