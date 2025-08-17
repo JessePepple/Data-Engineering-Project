@@ -18,7 +18,7 @@ Languages & Tools:
 
 Python (PySpark / notebooks)
 SQL
-Stored Procedures (for incremental & initial loads)
+
 
 
 ## PROJECT OVERVIEW
