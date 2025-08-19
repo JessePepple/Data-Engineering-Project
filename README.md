@@ -19,6 +19,8 @@ Languages & Tools:
 Python (PySpark / notebooks)
 SQL
 
+For detailed Storytelling regarding this project please visit this link:
+https://www.jesseportfolio.co.uk/post/cars-data-engineering-project
 
 
 ## PROJECT OVERVIEW
