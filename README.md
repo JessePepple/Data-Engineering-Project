@@ -43,11 +43,11 @@ In Phase 3, the primary focus was on implementing the Slowly Changing Dimensions
 
 The Initial Load was successful
 <img width="1434" height="737" alt="Screenshot 2025-09-03 at 07 07 33" src="https://github.com/user-attachments/assets/acf50df7-6930-473b-9507-bc4894d058cf" />
-I then added new changes to the data and ran it again which was also successful fully concluding that our slowly changing dimension was a success
+To further validate the pipeline, I introduced new changes to the source data and re-ran the process. The updates were handled successfully, confirming that the Slowly Changing Dimensions (SCD) logic worked as intended. This final step demonstrated the robustness of the design and fully concluded the project with a reliable and scalable data pipeline.
 
 <img width="1434" height="737" alt="Screenshot 2025-09-03 at 11 02 13" src="https://github.com/user-attachments/assets/7d1b2c6c-dd9d-479b-ab11-c3ba484896ee" />
 
-After this i tested it out by playing with some queries in the Sql Warehouse on Databricks which was a success.
+To validate the final output, I tested the data by running SQL queries in the Databricks SQL Warehouse, simulating the type of exploration a data analyst would perform. This step confirmed that the data was well-modeled, accurate, and ready for analysis, thereby concluding the project and demonstrating that the pipeline successfully delivered data that is both prepared and business-ready.
 
 ## Lesson Learnt
 
