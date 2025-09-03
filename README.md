@@ -61,8 +61,6 @@ Transformation Complexity – Even “light” transformations in the Silver lay
 
 Data Modeling Best Practices – Building the Star Schema emphasized the importance of carefully creating dimension and fact tables, along with surrogate keys, to ensure the model supports analytical queries effectively.
 
-Automation & Scheduling – Setting up pipelines for scheduled loads highlighted how automation is not just a convenience but a necessity for maintaining reliable and consistent data workflows.
-
 Overall, this project helped strengthen my ability to design and implement scalable pipelines while balancing governance, performance, and usability.
 
 
