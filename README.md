@@ -23,6 +23,17 @@ For detailed Storytelling regarding this project please visit this link:
 https://www.jesseportfolio.co.uk/post/cars-data-engineering-project
 
 
+Key Takeaways / Project Impact
+
+Governance: Unity Catalog reinforced the importance of centralized security and access control
+
+Incremental Pipeline Design: Balanced efficiency and scalability for regular updates
+
+Transformation Awareness: Even minimal transformations can impact downstream processes
+
+Dimensional Modeling: Proper creation of dimension and fact tables with surrogate keys ensures query performance and analytical integrity
+
+Portfolio Impact: Demonstrates ability to design and implement end-to-end data pipelines with governance, scalability, and analytical readiness
 ## PROJECT OVERVIEW
 <img width="1323" height="736" alt="Project1 Overview" src="https://github.com/user-attachments/assets/d7ba01c6-7acc-4bca-bee6-36ab96d920a4" />
 
@@ -45,6 +56,22 @@ FROM source_cars_data; Whilst the last_laod was SELECT * FROM water_table;
 
 <img width="1434" height="737" alt="Screenshot 2025-09-01 at 06 05 50" src="https://github.com/user-attachments/assets/662dd125-5508-4914-a286-ffcf023a6c50" />
 
+Goal: Efficiently ingest raw data from GitHub into Azure SQL Database.
+
+KPIs & Metrics:
+
+Source Integration: Connected GitHub as the primary raw data source
+
+Initial Load: Successfully ingested full dataset into SQL Database
+
+Incremental Load: Implemented stored procedures to manage incremental updates
+
+Data Validation: Initial ingestion validated with no missing or corrupted rows
+
+Result Statement:
+
+Built a reliable pipeline for raw data ingestion, supporting both initial and incremental loads for scalable updates.
+
 ## Phase2(Transformation)
 
 The project also utilized Unity Catalog to provide secure and centralized data governance, followed by the setup of the Databricks environment for the core transformation tasks. As demonstrated in the Silver Notebook, the transformations required at this stage were relatively minimal. The most notable adjustment was splitting the Model_Id field into a new Model Category, which laid the groundwork for handling Slowly Changing Dimensions (SCDs Type 1) and preparing the data for further refinement.
@@ -53,6 +80,21 @@ The project also utilized Unity Catalog to provide secure and centralized data g
 <img width="1434" height="737" alt="Screenshot 2025-09-02 at 01 52 38" src="https://github.com/user-attachments/assets/17a40028-3988-47f5-bbb3-99876f5a7dc3" />
 <img width="1434" height="737" alt="Screenshot 2025-09-01 at 11 12 19" src="https://github.com/user-attachments/assets/33703ee4-b091-410c-a54a-d66ef245c4ee" />
 
+Bronze → Silver Layer Transformation
+
+Goal: Clean and prepare data for analytical use.
+
+KPIs & Metrics:
+
+Minimal Transformations: Split Model_ID into Model Category for SCD preparation
+
+SCD Type 1 Readiness: Prepared dimension keys and surrogate keys for downstream processing
+
+Databricks Environment: Configured notebooks and parameterized pipelines for transformations
+
+Result Statement:
+
+Successfully transformed raw data into an organized Silver layer, ready for enrichment and analytical modeling.
 ## Phase3 (Serving)
 In Phase 3, the primary focus was on implementing the Slowly Changing Dimensions (SCD) process, which involved cleaning the data and creating the necessary keys for the final tables. This step included building the dimension model and generating surrogate keys for entities such as DealerName/DealerID, ModelID/ModelCategory, Date_ID, and BranchID/BranchName. These dimensions were then joined together in the Fact Sales table to finalize the Star Schema, ensuring the data was optimized for analytics and reporting. Once the schema was complete, I planned to schedule a pipeline for both the initial load (stored in the Databricks warehouse) and the incremental load, enabling the pipeline to refresh efficiently as new data arrives.
 
@@ -71,6 +113,24 @@ To further validate the pipeline, I introduced new changes to the source data an
 
 To validate the final output, I tested the data by running SQL queries in the Databricks SQL Warehouse, simulating the type of exploration a data analyst would perform. This step confirmed that the data was well-modeled, accurate, and ready for analysis, thereby concluding the project and demonstrating that the pipeline successfully delivered data that is both prepared and business-ready.
 
+Gold Layer & Star Schema
+
+Goal: Implement a robust dimensional model optimized for analytics.
+
+KPIs & Metrics:
+
+Dimension Tables: Generated surrogate keys for Dealer, Model, Date, and Branch
+
+Fact Table: Integrated dimensions into Fact Sales table
+
+SCD Type 1: Validated that incremental updates correctly updated dimensions and fact tables
+
+Result Statement:
+
+Created a fully functional Star Schema, supporting both initial and incremental data loads, ensuring accurate and analyst-ready data.
+
+
+
 ## Lesson Learnt
 
 Working through this project provided valuable insights into the end-to-end data engineering lifecycle. A few key takeaways include:
@@ -87,6 +147,21 @@ Overall, this project helped strengthen my ability to design and implement scala
 
 
 
+Data Serving & Validation
+
+Goal: Make curated data available for analysis and reporting.
+
+KPIs & Metrics:
+
+Databricks SQL Warehouse: Validated tables through queries and exploration
+
+Incremental Updates: Confirmed new changes handled correctly by SCD Type 1 logic
+
+Pipeline Robustness: Demonstrated reliable end-to-end execution
+
+Result Statement:
+
+Delivered accurate, curated, and business-ready datasets, enabling analysts to explore and report on data efficiently.
 
 
 
